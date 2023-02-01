@@ -1,0 +1,49 @@
+
+#head1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+
+}
+
+
+
+.container{
+    width: 100%;
+    margin-top: 18em;
+}
+
+.container .card{
+    text-align: center;
+
+}
+
+.container .card h2,
+.container .card p{
+    padding: 15px;
+}
+
+.container .card{
+    overflow: hidden;
+    z-index: 1;
+}
+
+.container .card:hover{
+    color: aqua;
+}
+
+.container .card:before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgb(196, 12, 12);
+    transform: translateY(-18.5em);
+    transition: 1s;
+    z-index: -1;
+
+}
+
+.container .card:hover:before{
+    transform: translateY(0);
+    transition: 0.5s;
+}

@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h4 id="head1" class="text-center">Registration Form</h4>
+
+
+<div class="container">
+    <form action="register" method="post">
+        {% csrf_token %}
+        <div class="container">
+            <div class="form-row">
+                <div class="form-group col-md">
+                  <label for="">First Name</label>
+                  <input type="text" placeholder="first name" name="firstname" class="form-control">
+                </div>
+            </div>
+    
+            <div class="form-row">
+                <div class="form-group col-md">
+                    <label for="">Last Name</label>
+                    <input type="text" placeholder="Last name" name="lastname" class="form-control">
+                </div>
+            </div>
+    
+            <div class="form-row">
+                <div class="form-group col-md">
+                    <label for="">Username</label>
+                    <input type="text" placeholder="username" name="username" class="form-control">
+                </div>
+            </div>
+    
+    
+            <div class="form-row">
+                <div class="form-group col-md">
+                  <label for="">Email Id</label>
+                  <input type="email" placeholder="Email" name="email" class="form-control">
+                </div>
+            </div>
+    
+            <div class="form-row">
+                <div class="form-group col-md">
+                    <label for="">password</label>
+                    <input type="password" placeholder="password" name="password1" class="form-control">
+                </div>
+            </div>
+    
+            <div class="form-row">
+                <div class="form-group col-md">
+                    <label for="">Confirm password</label>
+                    <input type="password" placeholder="Confirm password" name="password2" class="form-control">
+                </div>
+            </div>
+              
+              <div class="form-row">
+                <div class="form-group col-md-2">
+                  <label for="inputState">Gender</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>Male</option>
+                    <option>Female</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+        </div>   
+    </form>
+    
+</div>
+<div class="alert alert-primary" role="alert">
+    
+    {% for message in messages%}
+     <h4>{{message}}</h4>
+
+    {% endfor%}
+</div>
+
+
+{% endblock %}

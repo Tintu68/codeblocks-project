@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<form action="">
+    <div class="container">
+        <div class="form-row">
+            <div class="form-group col-md">
+                <label for="">Username</label>
+                <input type="text" placeholder="username" name="username" class="form-control">
+            </div>
+        </div>
+    
+        <div class="form-row">
+            <div class="form-group col-md">
+                <label for="">password</label>
+                <input type="password" placeholder="password" name="password1" class="form-control">
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+</form>
+{% endblock %}
