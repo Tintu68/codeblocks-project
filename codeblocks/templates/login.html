@@ -4,7 +4,8 @@
 
 {% block content %}
 
-<form action="">
+<form action="login" method="post">
+    {% csrf_token %}
     <div class="container">
         <div class="form-row">
             <div class="form-group col-md">
@@ -16,7 +17,7 @@
         <div class="form-row">
             <div class="form-group col-md">
                 <label for="">password</label>
-                <input type="password" placeholder="password" name="password1" class="form-control">
+                <input type="password" placeholder="password" name="password" class="form-control">
             </div>
         </div>
     </div>
